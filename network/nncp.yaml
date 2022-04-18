@@ -1,0 +1,22 @@
+apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: nncp
+spec:
+  desiredState:
+    interfaces:
+    - bridge:
+        options:
+          stp:
+            enabled: false
+        port:
+        - name: ens224
+      description: Linux bridge
+      ipv4:
+        enabled: false
+      mtu: 9000
+      name: br1
+      state: up
+      type: linux-bridge
+  nodeSelector:
+    kubernetes.io/hostname: gokhan.lp.int

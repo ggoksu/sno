@@ -26,10 +26,10 @@ spec:
       status: {}
   logCollector: {}
   mgr:
-    allowMultiplePerNode: true
+    allowMultiplePerNode: false
     count: 1
   mon:
-    allowMultiplePerNode: true
+    allowMultiplePerNode: false
     count: 1
   monitoring: {}
   network: {}
@@ -42,3 +42,4 @@ spec:
       name: gokhan.lp.int
       resources: {}
     useAllDevices: false
+    useAllNodes: false
